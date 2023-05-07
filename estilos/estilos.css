@@ -1,0 +1,566 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+@font-face {
+  font-family: Heaming;
+  src: url(/Fonts/Heming/Heming.ttf);
+  font-weight:100;
+}
+body {
+  /* font-family: 'Major Mono Display', monospace;
+  font-family: 'Poppins', sans-serif; */
+  font-family: Heaming;
+  margin: 0;
+  background-color:#0f0f0f;
+}
+
+@font-face {
+  font-family: NeuePower;
+  src: url(/Fonts/NeuePower-Trial/TTF/NeuePowerTrial-Heavy.ttf);
+}
+
+.navbar {
+  width: 72px;
+  position: fixed;
+  inset: 0;
+  margin: auto 1rem;
+  z-index: 1;
+}
+
+.navItems {
+  background-color: rgba(0, 0, 0, 0.788);
+  padding-block: 70px;
+  width: 100%;
+  border-radius: 50px;
+  display: grid;
+  row-gap: 3rem;
+}
+
+.navLink {
+  position: relative;
+  display: inline-flex;
+}
+
+.iconsNav {
+  color: white;
+}
+
+.navText {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  transform: translateX(40px);
+  font-size: .830rem;
+  font-weight: 500;
+  background-color: green;
+  color: white;
+  border-radius: 3rem;
+  padding: 6px 16px;
+  pointer-events: none;
+  transition: transform .5s, opacity .5s;
+  opacity: 0;
+}
+
+.navLink:hover .navText {
+  opacity: 1;
+  transform: translateX(48px);
+}
+
+.iconsNav:hover {
+  color: green;
+  transition: 0.5s ease;
+}
+
+.heroHeader {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background: linear-gradient(130deg,green,black,rgb(34, 34, 34));
+  background-size: 400% 400%;
+  animation: animateBack 15s ease infinite;
+  /* background-image: url(/Source/andrew-kliatskyi-iQUf7gndqXE-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;*/
+}
+
+@keyframes animateBack {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.titulo{
+  font-family: NeuePower;
+  font-size: 70px;
+}
+
+.containerRedes {
+  display: flex;
+  width: 72px;
+}
+
+.redesButtons {
+  position: relative;
+  margin: 0.5rem;
+  padding-block: 10px;
+  background-color: rgba(0, 0, 0, 0.37);
+  border-radius: 50%;
+}
+
+.redesButtons:hover{
+  background-color: green;
+  transition: background-color .5s ease;
+}
+
+.redesButtons:first-child {
+  margin-left: 0rem;
+}
+
+.redesButtons i{
+  width: 100%;
+  color: white;
+  padding: 14px;
+}
+
+.textosheader {
+  padding: 0 20%;
+}
+
+.sobreMi{
+  margin-bottom: 2rem;
+}
+
+.sobreMiParagraph{
+  letter-spacing: 0.05rem;
+}
+
+.btn-green-moon {
+
+  background: #56ab2f;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+
+.btn-rounded {
+  border-radius: 35px;
+}
+
+.encabezados {
+  padding-top: 10%;
+}
+
+.paragraph {
+  padding: 5rem;
+  border-left: green 1px solid;
+  margin: 1rem;
+}
+
+.buttons {
+  display: flex;
+  padding-top: 2rem;
+}
+
+.skillText{
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.skillsContent{
+  margin:1rem 0;
+}
+
+.barraEstado{
+  background-color: #00000049;
+  width: auto;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.barraprogreso {
+  background-color: green;
+  border-radius: 6px;
+  width: 90%;
+  height: 100%;
+  animation: progress 0.7s ease-in-out forwards;
+}
+
+.barraprogreso.phothoshop{
+  width: 70%;
+}
+
+.barraprogreso.illustrator{
+  width: 80%;
+}
+
+.barraprogreso.aftereffects{
+  width: 50%;
+}
+
+.barraprogreso.html{
+  width: 45%;
+}
+
+.barraprogreso.css{
+  width: 55%;
+}
+
+.barraprogreso.jscript{
+  width: 30%;
+}
+
+@keyframes progress{
+  0%{
+    width: 0;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#galleryDiseno {
+  width: 400px;
+}
+
+#galleryCont {
+  margin: 10rem 0;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background: #0000009f;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: green;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(69, 80, 91, 0.8);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.884);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid rgba(69, 80, 91, 0.8);
+  ;
+  border-left: 3px solid rgba(69, 80, 91, 0.8);
+  ;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid rgba(69, 80, 91, 0.8);
+  ;
+  border-right: 3px solid rgba(69, 80, 91, 0.8);
+  ;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: green;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: green;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #45505b;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #148af9;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+.musicContenedor{
+  margin: 150px 230px;
+}
+
+.infoBeatContenedor{
+  z-index: 1;
+  padding-top:160px;
+}
+.beatmParagraph{
+  width: 70%;
+}
+.musicImagen{
+  width:50rem;
+}
+
+.buttonContainer{
+  width: 150px;
+}
+
+.FollowButton{
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px ;
+}
+
+.FollowButton::before{
+  content: "";
+  position: absolute;
+  top:50%;
+  z-index: -1;
+  translate: calc(100% + 4px)-50%;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  border-radius: 50px;
+  transition: 
+    translate 0.25s 0.25s
+    cubic-bezier(0, 0, 0.5, 2),
+    width 0.25s
+    cubic-bezier(0, 0, 0.5, 2);
+}
+
+.FollowButton:hover::before{
+  width: 100%;
+  translate: -18px -50%;
+  transition: 
+    translate 0.25s
+    cubic-bezier(0, 0, 0.5, 2),
+    width 0.25s 0.25s
+    cubic-bezier(0, 0, 0.5, 2);
+}
+
+.FollowButton i{
+  margin-left: 5px;
+  transition: 
+    translate 0.25s 0.4s
+    cubic-bezier(0, 0, 0.5, 2);
+}
+
+.FollowButton:hover i{
+  translate: 3px 0;
+}
+
+.beatMakingResponsive{
+  display: none;
+}
+
+.beatRMakingTitle{
+  display: none;
+}
+
+.musicParagraphR{
+  display: none;
+}
+
+.buttonRcontainer {
+  display: none;
+}
+
+
+.contactContain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.adress{
+  margin-top: 1rem;
+}
+
+.socialLink{
+  margin-top: 2rem;
+}
+
+.socialIcon{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: .5rem;
+  width: 100%;
+}
+
+.socialIcon:hover{
+  color: green;
+  transition: .5s ease;
+}
+
+
+@media (min-width: 576px) { 
+  
+}
+@media (min-width: 768px) { 
+
+  
+}
+@media (min-width: 992px) { 
+  
+}
+
+@media (min-width: 1200px) { 
+
+}
+
+@media (max-width: 1500px) {
+  .musicContenedor{
+    display: none;
+  }
+  .beatMakingResponsive{
+    background-image:url(/Source/denisse-leon-OVEWbIgffDk-unsplash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 100px;
+    padding: 100px;
+  }
+
+  .buttonRcontainer{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    padding: .5rem;
+    border-radius: 50px;
+  }
+
+  .beatRMakingTitle{
+    display: unset;
+  }
+  
+  .musicParagraphR{
+    display: unset;
+  }
+  
+  .buttonRmusic{
+    text-decoration: none;
+  }
+  
+} 
