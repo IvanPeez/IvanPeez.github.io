@@ -99,6 +99,7 @@ body {
 .titulo{
   font-family: NeuePower;
   font-size: 70px;
+  color: white;
 }
 
 .containerRedes {
@@ -240,9 +241,52 @@ body {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolioTaskApp{
+  margin-right: 90px;
+  padding: 0 0 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.portfolioTaskApp_image{
+  width:90%;
+}
+
+.portfolio_btn{
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.portfolio_btn_icon{
+  width: 30px;
+  transition: filter .3s
+}
+.portfolio_btn_icon:hover{
+  
+  filter: brightness(0) saturate(100%) invert(26%) sepia(83%) saturate(1637%) hue-rotate(94deg) brightness(97%) contrast(104%)
+}
+
+.portfolioTaskApp_etiqueta{
+  position: absolute;
+  color: green;
+  opacity: 0;
+  font-weight: 700;
+  transform: translate(10px,5px);
+  transition: transform .3s, opacity .3s;
+  letter-spacing: 1px;
+}
+
+.portfolio_btn:hover .portfolioTaskApp_etiqueta {
+  opacity: 1;
+  transform: translate(20px,5px);
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
+
 
 .portfolio #portfolio-flters {
   padding: 0;
@@ -513,23 +557,25 @@ body {
   transition: .5s ease;
 }
 
-
-@media (min-width: 576px) { 
-  
-}
-@media (min-width: 768px) { 
-
-  
-}
-@media (min-width: 992px) { 
-  
-}
-
-@media (min-width: 1200px) { 
-
-}
-
 @media (max-width: 1500px) {
+
+  .portfolioTaskApp{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+  }
+  .portfolioTaskApp_content{
+    text-align: center;
+  }
+  
+  .portfolioTaskApp_image{
+    width:90%;
+  }
+
   .musicContenedor{
     display: none;
   }
